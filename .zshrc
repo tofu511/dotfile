@@ -74,13 +74,23 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=$HOME/go
 
 # scala env
-export PATH="${HOME}/.scalaenv/bin:${PATH}"
-eval "$(scalaenv init -)"
+if which scalaenv > /dev/null; then
+    export PATH="${HOME}/.scalaenv/bin:${PATH}"
+    eval "$(scalaenv init -)"
+fi
+
+# jenv
+if which jenv > /dev/null; then
+  # JENV_ROOTがemptyの場合、'${HOME}/.jenv'がrootと設定される
+  export JENV_ROOT=/usr/local/bin/jenv
+  eval "$(jenv init -)"
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+export LANG=ja_JP.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -117,3 +127,4 @@ alias gd='git diff'
 alias gp='git push'
 alias gpl='git pull'
 alias gc='git commit'
+alias lg='lazygit'
