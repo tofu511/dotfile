@@ -80,11 +80,11 @@ if which scalaenv > /dev/null; then
 fi
 
 # jenv
-if which jenv > /dev/null; then
+#if which jenv > /dev/null; then
   # JENV_ROOTがemptyの場合、'${HOME}/.jenv'がrootと設定される
-  export JENV_ROOT=/usr/local/bin/jenv
-  eval "$(jenv init -)"
-fi
+#  export JENV_ROOT=/usr/local/bin/jenv
+#  eval "$(jenv init -)"
+#fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
