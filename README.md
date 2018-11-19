@@ -4,7 +4,7 @@
 
 ### Setup my zsh
 
-```
+```bash
 cd ~
 git clone https://github.com/tofu511/dotfiles.git
 
