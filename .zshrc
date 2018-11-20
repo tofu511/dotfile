@@ -70,6 +70,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Prompt
+#DEFAULT=$'\U1F60A ' # SMILING FACE WITH SMILING EYES 
+#ERROR=$'\U1F914 '   # THINKING FACE
+#PROMPT=$'%(?.${DEFAULT}.${ERROR}) '
+
 # gopath
 export GOPATH=$HOME/go
 
