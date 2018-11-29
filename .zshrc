@@ -80,10 +80,8 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=$HOME/go
 
 # scala env
-if which scalaenv > /dev/null; then
-    export PATH="${HOME}/.scalaenv/bin:${PATH}"
-    eval "$(scalaenv init -)"
-fi
+export PATH="${HOME}/.scalaenv/bin:${PATH}"
+eval "$(scalaenv init -)"
 
 # jenv
 #if which jenv > /dev/null; then
